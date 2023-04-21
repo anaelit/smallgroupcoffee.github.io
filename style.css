@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
 
+/* unicorn */
+
 /* missing dark mode button */
 
 /*Nathan added white link*/
@@ -474,4 +476,81 @@ section{
   html{
     font-size: 50%;
   }
+}
+
+/* Nathan added mobile styles */
+@media screen and (max-width: 768px) {
+
+  /* adjust font sizes */
+  html {
+    font-size: 50%;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+  .home .content h3 {
+    font-size: 4rem;
+  }
+
+  .about .row .content h3 {
+    font-size: 2rem;
+  }
+
+  /* adjust padding and margins */
+  section {
+    padding: 1rem 5%;
+  }
+
+  .heading {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .line {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 8rem;
+  }
+
+  .home .content {
+    min-width: 100%;
+    padding: 0 2rem;
+  }
+
+  .about .row .content {
+    padding: 4rem 2rem;
+  }
+
+  /* adjust navbar and icons */
+  .header {
+    padding: 1rem 5%;
+  }
+
+  .header .navbar {
+    display: none;
+  }
+
+  .header #menu-btn {
+    display: block;
+    font-size: 2rem;
+    color: var(--white);
+  }
+
+  .header .icons div {
+    font-size: 2rem;
+  }
+
+  /* adjust home background */
+  .home {
+    background-position: top;
+  }
+
+  /* adjust about background */
+  .about {
+    background-size: cover;
+    background-position: top;
+  }
+
 }
