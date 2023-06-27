@@ -91,10 +91,27 @@
 
     
 
-      .contact-section {
+     /*  .contact-section {
         background: url(images/connect.jpeg) no-repeat center center fixed;
         background-size: cover;
-      }
+      } */
+
+      .contact-section {
+  position: relative;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/connect.jpeg);
+  opacity: 0.3;
+}
 
      
 
@@ -236,6 +253,7 @@
           </div>
         </div>
       </div>
+      <div class="contact-image img-fluid"></div>
     </section>
 
     <section class="footer">
