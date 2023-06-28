@@ -85,7 +85,11 @@
   height: 100%;
   max-width: none;
   max-height: none;
-  opacity: 0.3;
+  opacity: 0.4;
+}
+
+.image-over-full-opacity {
+  opacity: 0.6;
 }
 
 
@@ -117,8 +121,25 @@
   z-index: 1;
       }
 
+      .overlay-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  text-align: left;
+  z-index: 1;
+}
+.overlay-home h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-left: 20px;
+        text-align: left; /* Updated */
+        margin-top: 80px;
+      }
+
+
       .overlay h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         line-height: 1.2;
         margin-left: 20px;
         text-align: left; /* Updated */
@@ -134,6 +155,23 @@ h4 {
   font-weight: bold;
   color: rgba(255, 166, 0, 0.7);
 }
+
+.img-ratio {
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%; /* Adjust this value to match your desired aspect ratio */
+  position: relative;
+}
+
+.img-ratio img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
     </style>
   </head>
@@ -171,15 +209,24 @@ h4 {
         </ul>
       </div>
     </nav>
+<br>
+<br>
+<br>
 
-    <section id="home" class="section-sg">
-      <div class="overlay">
-        <h1>DISCOVER THE TASTE <br>OF REAL COFFEE</h1>
-        <img src="images/logo-white.svg" alt="Small Group Coffee Logo" width="300">
+    <section id="home" class="section-sg img-ratio">
+      <div class="overlay-home">
+        <h1>Discover the taste <br>of real coffee</h1>
+        <!-- <div style="display: flex; justify-content: center; align-items: center;">
+          <img src="images/logo-white.svg" alt="Small Group Coffee Logo" width="300">
+        </div> -->
+        
+       
+       
+       
       
-        <div style="height: 40vh"></div>
+        
       </div>
-      <img src="images/home-coffee.jpeg" class="image-over"></div>
+      <img src="images/yellow-coffee.png" class="image-over img-fluid image-over-full-opacity"></div>
     </section>
 
     <section id="about" class="section-sg">
@@ -262,14 +309,14 @@ h4 {
         <h1>Contact</h1>
         <div class="container py-5">
           <div class="row">
-            <div class="col-md-6 col-sm-12 mt-sm-4">
+            <div class="col-md-6 col-sm-12 mt-sm-4 mb-3">
               <i class="fas fa-location-arrow fa-2x"></i>
               <h3>Address</h3>
               <a href="https://goo.gl/maps/kn5ehewTToux4K6e7" class="link"
                 >8020 N. Main St Houston TX, 77022</a
               >
             </div>
-            <div class="col-md-6 col-sm-12 mt-sm-4">
+            <div class="col-md-6 col-sm-12 mt-sm-4 mb-3">
               <i class="fas fa-envelope fa-2x"></i>
               <div>
                 <h3>Email</h3>
@@ -277,12 +324,12 @@ h4 {
               </div>
             </div>
 
-            <div class="col-md-6 col-sm-12 mt-sm-4">
+            <div class="col-md-6 col-sm-12 mt-sm-4 mb-3">
               <i class="fas fa-phone fa-2x"></i>
               <h3>Call us</h3>
               <p>832-316-0632</p>
             </div>
-            <div class="col-md-6 col-sm-12 mt-sm-4">
+            <div class="col-md-6 col-sm-12 mt-sm-4 mb-3">
               <i class="fas fa-clock fa-2x"></i>
               <h3>Hours</h3>
               <p>Monday - Friday: 8:00 - 23:00<br />Saturday: 8:00 - 21:00</p>
@@ -293,7 +340,7 @@ h4 {
       <img src="images/connect.jpeg" class="image-over"></div>
     </section>
 
-    <section class="footer">
+    <section class="footer m-3">
       <div>
         Made with <i class="fas fa-heart"></i> by
         <a href="http://linktr.ee/nathanpuls">Nathan Puls</a>
